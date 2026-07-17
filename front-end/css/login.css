@@ -1,0 +1,708 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    font-family:"Poppins",sans-serif;
+
+    overflow-x:hidden;
+
+    background:#08111f;
+
+    color:white;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+    background:linear-gradient(
+        135deg,
+        #050816,
+        #0a1930,
+        #08111f
+    );
+
+}
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:.55;
+
+}
+
+.circle1{
+
+    width:350px;
+    height:350px;
+
+    background:#00e5ff;
+
+    top:-120px;
+    left:-80px;
+
+}
+
+.circle2{
+
+    width:420px;
+    height:420px;
+
+    background:#4c6fff;
+
+    right:-120px;
+    bottom:-140px;
+
+}
+
+.circle3{
+
+    width:280px;
+    height:280px;
+
+    background:#00ffb7;
+
+    left:45%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:70px;
+
+}
+
+/* ===========================
+   LADO ESQUERDO
+=========================== */
+
+.left{
+
+    width:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.left h1{
+
+    font-size:70px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+.subtitle{
+
+    font-size:20px;
+
+    color:#cfd6e4;
+
+    max-width:520px;
+
+    line-height:34px;
+
+    margin-bottom:50px;
+
+}
+
+.features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.feature span{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+}
+
+.feature p{
+
+    color:#d5dce8;
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   LADO DIREITO
+=========================== */
+
+.right{
+
+    width:45%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.card{
+
+    width:430px;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.card h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.text{
+
+    color:#c8d2df;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    color:#dce3ed;
+
+}
+
+.input-group input{
+
+    height:55px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    padding:0 18px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-group input::placeholder{
+
+    color:#9ea7b5;
+
+}
+
+.input-group input:focus{
+
+    border:1px solid #4c6fff;
+
+    box-shadow:0 0 15px rgba(76,111,255,.35);
+
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+#btnLogin{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #4c6fff,
+        #00c8ff
+    );
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+#btnLogin:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 30px rgba(0,180,255,.45);
+
+}
+
+.cadastro{
+
+    width:100%;
+
+    height:56px;
+
+    margin-top:25px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:transparent;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.cadastro:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:28px;
+
+}
+
+.divider span{
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.divider p{
+
+    color:#9fa8b5;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   ERRO
+=========================== */
+
+#mensagemErro{
+
+    margin-top:18px;
+
+    color:#ff6b6b;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+@keyframes floatCard {
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.card{
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes circleOne{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(40px,35px);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+
+}
+
+@keyframes circleTwo{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-45px,-30px);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+
+}
+
+@keyframes circleThree{
+
+    0%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    50%{
+        transform:translate(-50%,-50%) scale(1.15);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+}
+
+.circle1{
+
+    animation:circleOne 12s ease-in-out infinite;
+
+}
+
+.circle2{
+
+    animation:circleTwo 15s ease-in-out infinite;
+
+}
+
+.circle3{
+
+    animation:circleThree 10s ease-in-out infinite;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.left{
+
+    animation:fadeIn 1s ease;
+
+}
+
+.right{
+
+    animation:fadeIn 1.2s ease;
+
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media(max-width:1100px){
+
+    .container{
+
+        padding:40px;
+
+        gap:40px;
+
+    }
+
+    .left h1{
+
+        font-size:55px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .container{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        text-align:center;
+
+        padding:35px;
+
+    }
+
+    .left{
+
+        width:100%;
+
+        align-items:center;
+
+        margin-bottom:40px;
+
+    }
+
+    .right{
+
+        width:100%;
+
+    }
+
+    .features{
+
+        width:100%;
+
+        align-items:center;
+
+    }
+
+    .feature{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .card{
+
+        width:100%;
+
+        padding:30px;
+
+    }
+
+    .left h1{
+
+        font-size:42px;
+
+    }
+
+    .subtitle{
+
+        font-size:16px;
+
+        line-height:28px;
+
+    }
+
+    .feature p{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        padding:20px;
+
+    }
+
+}
+
+@media(max-width:400px){
+
+    .left h1{
+
+        font-size:34px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    #btnLogin,
+    .cadastro{
+
+        height:52px;
+
+        font-size:15px;
+
+    }
+
+    .input-group input{
+
+        height:50px;
+
+    }
+
+}
